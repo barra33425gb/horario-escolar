@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horário Escolar — 12.º A</title>
+  <style>
+    :root { font-family: Arial, Helvetica, sans-serif; color: #172033; background: #f3f6fb; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; }
+    main { width: min(1200px, 100%); text-align: center; background: white; padding: 24px; border-radius: 18px; box-shadow: 0 10px 35px #15213a18; }
+    .school-header { display: flex; justify-content: center; align-items: center; gap: 18px; flex-wrap: wrap; margin-bottom: 14px; }
+    .logo { width: 84px; height: 84px; object-fit: contain; }
+    .logo-placeholder { width: 84px; height: 84px; border: 2px dashed #9aa8bd; border-radius: 12px; display: grid; place-items: center; font-size: 12px; color: #66758c; }
+    h1 { margin: 0 0 6px; font-size: clamp(1.5rem, 3vw, 2.2rem); }
+    .subtitle { margin: 0; color: #536178; }
+    .table-wrap { overflow-x: auto; margin-top: 22px; }
+    table { width: 100%; min-width: 760px; border-collapse: collapse; table-layout: fixed; }
+    th, td { border: 2px solid #344256; padding: 12px 7px; text-align: center; vertical-align: middle; }
+    thead th { background: #e7edf6; font-size: 1rem; }
+    th.time, td.time { width: 112px; background: #f1f4f8; font-weight: bold; }
+    td { height: 58px; font-weight: 700; }
+    .room { display: block; margin-top: 5px; font-size: .75rem; font-weight: normal; }
+    .port { background: #f7c9d6; color: #76243c; }
+    .mat { background: #cce5ff; color: #174a7a; }
+    .bio { background: #d7f0c8; color: #285b24; }
+    .anf { background: #ffe3ae; color: #754800; }
+    .ef { background: #d9d0ff; color: #453184; }
+    .emrc { background: #c8eee8; color: #155c54; }
+    .empty { background: #fff; }
+    .legend { margin-top: 24px; }
+    .legend h2 { font-size: 1.15rem; }
+    .legend ul { list-style: none; padding: 0; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+    .legend li { border-radius: 8px; padding: 9px 13px; font-weight: bold; }
+    footer { margin-top: 20px; color: #657187; font-size: .9rem; }
+    @media (max-width: 600px) { body { padding: 10px; } main { padding: 14px; } th, td { padding: 9px 5px; } }
+  </style>
+</head>
+<body>
+<main>
+  <header class="school-header">
+    <!-- Guarda o logótipo como imagens/logo-monte-da-lua.png e descomenta a linha seguinte. -->
+    <div class="logo-placeholder" aria-label="Espaço para o logótipo">Logótipo<br>da escola</div>
+    <!-- <img class="logo" src="imagens/logo-monte-da-lua.png" alt="Logótipo do Agrupamento de Escolas Monte da Lua"> -->
+    <div>
+      <h1>Horário Escolar — 12.º A</h1>
+      <p class="subtitle">Ciências e Tecnologias · 2026/2027</p>
+      <p class="subtitle">Agrupamento de Escolas Monte da Lua</p>
+    </div>
+  </header>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th class="time">Hora</th><th>Segunda</th><th>Terça</th><th>Quarta</th><th>Quinta</th><th>Sexta</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="time">08:00–08:50</td>
+          <td class="port" rowspan="2">PORT<span class="room">3.1.3</span></td>
+          <td class="anf" rowspan="2">AINF<span class="room">9.0.3</span></td>
+          <td class="ef" rowspan="2">EF<span class="room">G1A</span></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+        </tr>
+        <tr>
+          <td class="time">08:50–09:40</td>
+          <td class="empty"></td>
+          <td class="bio" rowspan="2">BIO<span class="room">T1 · L.B.2</span></td>
+        </tr>
+        <tr>
+          <td class="time">10:00–10:50</td>
+          <td class="mat" rowspan="2">MAT A<span class="room">3.1.3</span></td>
+          <td class="port" rowspan="2">PORT<span class="room">3.1.2</span></td>
+          <td class="mat">MAT A<span class="room">3.1.3</span></td>
+          <td class="empty"></td>
+        </tr>
+        <tr>
+          <td class="time">10:50–11:40</td>
+          <td class="port">PORT<span class="room">4.1.2</span></td>
+          <td class="empty"></td>
+          <td class="bio" rowspan="2">BIO<span class="room">T2 · L.B.2</span></td>
+        </tr>
+        <tr>
+          <td class="time">11:50–12:40</td>
+          <td class="bio">BIO<span class="room">3.1.3</span></td>
+          <td class="mat">MAT A<span class="room">3.1.2</span></td>
+          <td class="empty"></td>
+          <td class="empty"></td>
+        </tr>
+        <tr>
+          <td class="time">12:40–13:30</td>
+          <td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td>
+        </tr>
+        <tr>
+          <td class="time">13:35–14:25</td>
+          <td class="empty"></td><td class="empty"></td><td class="empty"></td>
+          <td class="emrc">EMRC<span class="room">9.1.4</span></td><td class="empty"></td>
+        </tr>
+        <tr>
+          <td class="time">14:25–15:15</td>
+          <td class="empty"></td><td class="empty"></td><td class="empty"></td>
+          <td class="ef">EF<span class="room">Q2</span></td><td class="empty"></td>
+        </tr>
+        <tr>
+          <td class="time">15:25–16:15</td>
+          <td class="empty"></td><td class="empty"></td><td class="empty"></td>
+          <td class="mat" rowspan="2">MAT A<span class="room">3.1.2</span></td><td class="empty"></td>
+        </tr>
+        <tr>
+          <td class="time">16:30–17:20</td>
+          <td class="empty"></td><td class="empty"></td><td class="empty"></td>
+          <td class="empty"></td>
+        </tr>
+        <tr>
+          <td class="time">17:20–18:10</td>
+          <td class="empty"></td><td class="empty"></td><td class="empty"></td>
+          <td class="anf">AINF<span class="room">9.0.3</span></td><td class="empty"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <section class="legend">
+    <h2>Legenda das disciplinas</h2>
+    <ul>
+      <li class="port">PORT — Português</li>
+      <li class="mat">MAT A — Matemática A</li>
+      <li class="bio">BIO — Biologia</li>
+      <li class="anf">AINF — Aplicações Informáticas</li>
+      <li class="ef">EF — Educação Física</li>
+      <li class="emrc">EMRC</li>
+    </ul>
+  </section>
+  <footer>Horário 2026/2027 · 12.º A</footer>
+</main>
+</body>
+</html>
